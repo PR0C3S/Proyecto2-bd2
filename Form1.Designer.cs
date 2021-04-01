@@ -35,8 +35,6 @@ namespace Proyecto2_bd2
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.btnTitulo = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnSiguiente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCamas2 = new System.Windows.Forms.TextBox();
@@ -46,8 +44,6 @@ namespace Proyecto2_bd2
             this.btnPrecio2 = new System.Windows.Forms.Button();
             this.btnTitulo2 = new System.Windows.Forms.Button();
             this.btnVerMas2 = new System.Windows.Forms.Button();
-            this.btnRating2 = new System.Windows.Forms.Button();
-            this.pbFoto2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCamas1 = new System.Windows.Forms.TextBox();
@@ -57,14 +53,11 @@ namespace Proyecto2_bd2
             this.btnPrecio1 = new System.Windows.Forms.Button();
             this.btnTitulo1 = new System.Windows.Forms.Button();
             this.btnVerMas1 = new System.Windows.Forms.Button();
-            this.btnRating1 = new System.Windows.Forms.Button();
-            this.pbFoto1 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.PanelVistaPublicacion = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtTituloPublicar = new System.Windows.Forms.TextBox();
             this.lblTituo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -91,20 +84,27 @@ namespace Proyecto2_bd2
             this.txtPublicado = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.chcListServicios = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRating1 = new System.Windows.Forms.Button();
+            this.pbFoto1 = new System.Windows.Forms.PictureBox();
+            this.btnRating2 = new System.Windows.Forms.Button();
+            this.pbFoto2 = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelPublicacion.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).BeginInit();
             this.PanelVistaPublicacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnBanos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnCapacidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -167,28 +167,6 @@ namespace Proyecto2_bd2
             this.btnTitulo.TabIndex = 14;
             this.btnTitulo.Text = "Publicaciones recomendadas";
             this.btnTitulo.UseVisualStyleBackColor = true;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
-            this.btnAtras.Location = new System.Drawing.Point(13, 216);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(48, 54);
-            this.btnAtras.TabIndex = 17;
-            this.btnAtras.UseVisualStyleBackColor = true;
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.FlatAppearance.BorderSize = 0;
-            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguiente.Image = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.Image")));
-            this.btnSiguiente.Location = new System.Drawing.Point(906, 216);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(48, 54);
-            this.btnSiguiente.TabIndex = 16;
-            this.btnSiguiente.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -320,41 +298,6 @@ namespace Proyecto2_bd2
             this.btnVerMas2.Text = "Ver mas";
             this.btnVerMas2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVerMas2.UseVisualStyleBackColor = false;
-            // 
-            // btnRating2
-            // 
-            this.btnRating2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnRating2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating2.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating2.FlatAppearance.BorderSize = 0;
-            this.btnRating2.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnRating2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRating2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRating2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnRating2.Image = ((System.Drawing.Image)(resources.GetObject("btnRating2.Image")));
-            this.btnRating2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRating2.Location = new System.Drawing.Point(167, 140);
-            this.btnRating2.Name = "btnRating2";
-            this.btnRating2.Size = new System.Drawing.Size(116, 38);
-            this.btnRating2.TabIndex = 8;
-            this.btnRating2.TabStop = false;
-            this.btnRating2.Text = "4.5/5";
-            this.btnRating2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRating2.UseVisualStyleBackColor = false;
-            // 
-            // pbFoto2
-            // 
-            this.pbFoto2.BackColor = System.Drawing.SystemColors.Control;
-            this.pbFoto2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbFoto2.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto2.Image")));
-            this.pbFoto2.Location = new System.Drawing.Point(0, 0);
-            this.pbFoto2.Name = "pbFoto2";
-            this.pbFoto2.Size = new System.Drawing.Size(402, 192);
-            this.pbFoto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFoto2.TabIndex = 0;
-            this.pbFoto2.TabStop = false;
             // 
             // panel3
             // 
@@ -489,41 +432,6 @@ namespace Proyecto2_bd2
             this.btnVerMas1.UseVisualStyleBackColor = false;
             this.btnVerMas1.Click += new System.EventHandler(this.btnVerMas1_Click);
             // 
-            // btnRating1
-            // 
-            this.btnRating1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnRating1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.BorderSize = 0;
-            this.btnRating1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnRating1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRating1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRating1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnRating1.Image = ((System.Drawing.Image)(resources.GetObject("btnRating1.Image")));
-            this.btnRating1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRating1.Location = new System.Drawing.Point(167, 140);
-            this.btnRating1.Name = "btnRating1";
-            this.btnRating1.Size = new System.Drawing.Size(116, 38);
-            this.btnRating1.TabIndex = 8;
-            this.btnRating1.TabStop = false;
-            this.btnRating1.Text = "4.8/5";
-            this.btnRating1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRating1.UseVisualStyleBackColor = false;
-            // 
-            // pbFoto1
-            // 
-            this.pbFoto1.BackColor = System.Drawing.SystemColors.Control;
-            this.pbFoto1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbFoto1.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto1.Image")));
-            this.pbFoto1.Location = new System.Drawing.Point(0, 0);
-            this.pbFoto1.Name = "pbFoto1";
-            this.pbFoto1.Size = new System.Drawing.Size(402, 192);
-            this.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFoto1.TabIndex = 0;
-            this.pbFoto1.TabStop = false;
-            // 
             // button10
             // 
             this.button10.FlatAppearance.BorderSize = 0;
@@ -604,22 +512,10 @@ namespace Proyecto2_bd2
             this.PanelVistaPublicacion.Controls.Add(this.txtTituloPublicar);
             this.PanelVistaPublicacion.Controls.Add(this.pictureBox1);
             this.PanelVistaPublicacion.Controls.Add(this.shapeContainer2);
-            this.PanelVistaPublicacion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelVistaPublicacion.Location = new System.Drawing.Point(0, 47);
+            this.PanelVistaPublicacion.Location = new System.Drawing.Point(936, 49);
             this.PanelVistaPublicacion.Name = "PanelVistaPublicacion";
-            this.PanelVistaPublicacion.Size = new System.Drawing.Size(965, 476);
+            this.PanelVistaPublicacion.Size = new System.Drawing.Size(29, 476);
             this.PanelVistaPublicacion.TabIndex = 12;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(75, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(394, 243);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtTituloPublicar
             // 
@@ -859,7 +755,7 @@ namespace Proyecto2_bd2
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2});
-            this.shapeContainer2.Size = new System.Drawing.Size(965, 476);
+            this.shapeContainer2.Size = new System.Drawing.Size(29, 476);
             this.shapeContainer2.TabIndex = 25;
             this.shapeContainer2.TabStop = false;
             // 
@@ -917,14 +813,117 @@ namespace Proyecto2_bd2
             this.chcListServicios.Size = new System.Drawing.Size(391, 88);
             this.chcListServicios.TabIndex = 29;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(75, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(394, 243);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnRating1
+            // 
+            this.btnRating1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnRating1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.BorderSize = 0;
+            this.btnRating1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnRating1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRating1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRating1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRating1.Image = global::Proyecto2_bd2.Properties.Resources.estrella__3_;
+            this.btnRating1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRating1.Location = new System.Drawing.Point(167, 140);
+            this.btnRating1.Name = "btnRating1";
+            this.btnRating1.Size = new System.Drawing.Size(116, 38);
+            this.btnRating1.TabIndex = 8;
+            this.btnRating1.TabStop = false;
+            this.btnRating1.Text = "4.8/5";
+            this.btnRating1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRating1.UseVisualStyleBackColor = false;
+            // 
+            // pbFoto1
+            // 
+            this.pbFoto1.BackColor = System.Drawing.SystemColors.Control;
+            this.pbFoto1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbFoto1.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto1.Image")));
+            this.pbFoto1.Location = new System.Drawing.Point(0, 0);
+            this.pbFoto1.Name = "pbFoto1";
+            this.pbFoto1.Size = new System.Drawing.Size(402, 192);
+            this.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto1.TabIndex = 0;
+            this.pbFoto1.TabStop = false;
+            // 
+            // btnRating2
+            // 
+            this.btnRating2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnRating2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating2.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating2.FlatAppearance.BorderSize = 0;
+            this.btnRating2.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnRating2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRating2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRating2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRating2.Image = global::Proyecto2_bd2.Properties.Resources.estrella__3_;
+            this.btnRating2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRating2.Location = new System.Drawing.Point(167, 140);
+            this.btnRating2.Name = "btnRating2";
+            this.btnRating2.Size = new System.Drawing.Size(116, 38);
+            this.btnRating2.TabIndex = 8;
+            this.btnRating2.TabStop = false;
+            this.btnRating2.Text = "4.5/5";
+            this.btnRating2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRating2.UseVisualStyleBackColor = false;
+            // 
+            // pbFoto2
+            // 
+            this.pbFoto2.BackColor = System.Drawing.SystemColors.Control;
+            this.pbFoto2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbFoto2.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto2.Image")));
+            this.pbFoto2.Location = new System.Drawing.Point(0, 0);
+            this.pbFoto2.Name = "pbFoto2";
+            this.pbFoto2.Size = new System.Drawing.Size(402, 192);
+            this.pbFoto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto2.TabIndex = 0;
+            this.pbFoto2.TabStop = false;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::Proyecto2_bd2.Properties.Resources.flecha_izquierda;
+            this.btnAtras.Location = new System.Drawing.Point(13, 216);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(48, 54);
+            this.btnAtras.TabIndex = 17;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguiente.Image = global::Proyecto2_bd2.Properties.Resources.flecha_correcta__1_;
+            this.btnSiguiente.Location = new System.Drawing.Point(906, 216);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(48, 54);
+            this.btnSiguiente.TabIndex = 16;
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(965, 523);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelVistaPublicacion);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelPublicacion);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -934,18 +933,18 @@ namespace Proyecto2_bd2
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).EndInit();
             this.PanelVistaPublicacion.ResumeLayout(false);
             this.PanelVistaPublicacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnBanos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnCapacidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).EndInit();
             this.ResumeLayout(false);
 
         }
