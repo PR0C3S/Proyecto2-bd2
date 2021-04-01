@@ -80,7 +80,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reservar.resx">
       <DependentUpon>Reservar.cs</DependentUpon>
@@ -97,14 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Imagenes\estrella %283%29.png" />
-    <Content Include="Imagenes\flecha-correcta %281%29.png" />
-    <Content Include="Imagenes\flecha-izquierda.png" />
-    <None Include="Resources\estrella %283%29.png" />
-    <None Include="Resources\flecha-izquierda.png" />
-    <None Include="Resources\flecha-correcta %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
