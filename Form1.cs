@@ -80,5 +80,10 @@ namespace Proyecto2_bd2
             spnBanos.Value = 
 
         }
+
+        private void btnRating1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
