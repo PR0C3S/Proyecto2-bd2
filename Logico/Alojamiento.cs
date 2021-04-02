@@ -25,6 +25,12 @@ namespace Proyecto2_bd2
             this.tipo = tipo;
             this.camas = camas;
         }
-        
+
+        public long IdAlojamiento { get => idAlojamiento; set => idAlojamiento = value; }
+        public string Provincia { get => provincia; set => provincia = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
+        public int Habitaciones { get => habitaciones; set => habitaciones = value; }
+        public int Banos { get => banos; set => banos = value; }
+        public int Camas { get => camas; set => camas = value; }
     }
 }

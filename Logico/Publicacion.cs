@@ -10,36 +10,44 @@ namespace Proyecto2_bd2
 {
     class Publicacion
     {
-
         private Image foto;
         private long idPublicacion;
         private DateTime fecha = DateTime.Now;
         private String Titulo;
-        private long idDueno;
+        private Persona persona;
         private float calificacion=0;
-        public static int votantes=0;
+        private static int votantes = 0;
         private int precio;
-        private String servicios;
         private int capacidad;
-        private bool ninos;
-        private bool mascotas;
-        private bool fumar;
-        private List<Reserva> reservas;
+        private List<bool> servicios;
+        private List<bool> permite;
+        private List<Reserva> reservas = new List<Reserva>();
+        private Alojamiento alojamiento;
 
+        public Image Foto { get => foto; set => foto = value; }
+        public long IdPublicacion { get => idPublicacion; set => idPublicacion = value; }
+        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Titulo1 { get => Titulo; set => Titulo = value; }
+        internal Persona Persona { get => persona; set => persona = value; }
+        public float Calificacion { get => calificacion; set => calificacion = value; }
+        public static int Votantes { get => votantes; set => votantes = value; }
+        public int Precio { get => precio; set => precio = value; }
+        public int Capacidad { get => capacidad; set => capacidad = value; }
+        public List<bool> Servicios { get => servicios; set => servicios = value; }
+        public List<bool> Permite { get => permite; set => permite = value; }
+        internal List<Reserva> Reservas { get => reservas; set => reservas = value; }
+        internal Alojamiento Alojamiento { get => alojamiento; set => alojamiento = value; }
 
-        public Publicacion(String titulo, Image imagen, long idDueno, int precio, String servicios, int capacidad, bool ninos, bool mascotas, bool fumar)
+        public Publicacion(Persona persona, String titulo, Image imagen, int precio, List<bool> servicios, List<bool> permite, Alojamiento alojamiento)
         {
             this.Titulo = titulo;
             this.idPublicacion = idPublicacion++;
             this.foto = imagen;
-            this.idDueno = idDueno;
+            this.persona = persona;
             this.precio = precio;
             this.servicios = servicios;
-            this.capacidad = capacidad;
-            this.ninos = ninos;
-            this.mascotas = mascotas;
-            this.fumar = fumar;
-            
+            this.permite = permite;
+            this.alojamiento = alojamiento;
         }
 
 

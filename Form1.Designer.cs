@@ -45,6 +45,8 @@ namespace Proyecto2_bd2
             this.btnPrecio1 = new System.Windows.Forms.Button();
             this.btnTitulo1 = new System.Windows.Forms.Button();
             this.btnVerMas1 = new System.Windows.Forms.Button();
+            this.btnRating1 = new System.Windows.Forms.Button();
+            this.pbFoto1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtCamas2 = new System.Windows.Forms.TextBox();
@@ -54,13 +56,19 @@ namespace Proyecto2_bd2
             this.btnPrecio2 = new System.Windows.Forms.Button();
             this.btnTitulo2 = new System.Windows.Forms.Button();
             this.btnVerMas2 = new System.Windows.Forms.Button();
+            this.btnRating2 = new System.Windows.Forms.Button();
+            this.pbFoto2 = new System.Windows.Forms.PictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnTitulo = new System.Windows.Forms.Button();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.PanelVistaPublicacion = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.chcListServicios = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblPublicadoPor = new System.Windows.Forms.Label();
             this.txtPublicado = new System.Windows.Forms.TextBox();
             this.btnReservar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -70,7 +78,7 @@ namespace Proyecto2_bd2
             this.label8 = new System.Windows.Forms.Label();
             this.spnCapacidad = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.spnPrecio = new System.Windows.Forms.NumericUpDown();
+            this.spnCamas = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.spnHabitaciones = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -82,29 +90,24 @@ namespace Proyecto2_bd2
             this.label1 = new System.Windows.Forms.Label();
             this.lblTituo = new System.Windows.Forms.Label();
             this.txtTituloPublicar = new System.Windows.Forms.TextBox();
+            this.pbCargarFoto = new System.Windows.Forms.PictureBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.btnRating1 = new System.Windows.Forms.Button();
-            this.pbFoto1 = new System.Windows.Forms.PictureBox();
-            this.btnRating2 = new System.Windows.Forms.Button();
-            this.pbFoto2 = new System.Windows.Forms.PictureBox();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnSiguiente = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.PanelPublicacion.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).BeginInit();
             this.PanelVistaPublicacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnCapacidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spnPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnCamas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnBanos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCargarFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,6 +148,7 @@ namespace Proyecto2_bd2
             this.button13.TabIndex = 3;
             this.button13.Text = "Publicar";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button11
             // 
@@ -158,6 +162,7 @@ namespace Proyecto2_bd2
             this.button11.TabIndex = 1;
             this.button11.Text = "Publicaciones";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -181,10 +186,10 @@ namespace Proyecto2_bd2
             this.PanelPublicacion.Controls.Add(this.btnSiguiente);
             this.PanelPublicacion.Controls.Add(this.btnTitulo);
             this.PanelPublicacion.Controls.Add(this.shapeContainer1);
-            this.PanelPublicacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelPublicacion.Location = new System.Drawing.Point(0, 0);
+            this.PanelPublicacion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelPublicacion.Location = new System.Drawing.Point(0, 57);
             this.PanelPublicacion.Name = "PanelPublicacion";
-            this.PanelPublicacion.Size = new System.Drawing.Size(965, 523);
+            this.PanelPublicacion.Size = new System.Drawing.Size(965, 466);
             this.PanelPublicacion.TabIndex = 11;
             this.PanelPublicacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -321,6 +326,42 @@ namespace Proyecto2_bd2
             this.btnVerMas1.UseVisualStyleBackColor = false;
             this.btnVerMas1.Click += new System.EventHandler(this.btnVerMas1_Click);
             // 
+            // btnRating1
+            // 
+            this.btnRating1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnRating1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.BorderSize = 0;
+            this.btnRating1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRating1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnRating1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRating1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRating1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRating1.Image = ((System.Drawing.Image)(resources.GetObject("btnRating1.Image")));
+            this.btnRating1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRating1.Location = new System.Drawing.Point(167, 140);
+            this.btnRating1.Name = "btnRating1";
+            this.btnRating1.Size = new System.Drawing.Size(116, 38);
+            this.btnRating1.TabIndex = 8;
+            this.btnRating1.TabStop = false;
+            this.btnRating1.Text = "4.8/5";
+            this.btnRating1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRating1.UseVisualStyleBackColor = false;
+            this.btnRating1.Click += new System.EventHandler(this.btnRating1_Click);
+            // 
+            // pbFoto1
+            // 
+            this.pbFoto1.BackColor = System.Drawing.SystemColors.Control;
+            this.pbFoto1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pbFoto1.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto1.Image")));
+            this.pbFoto1.Location = new System.Drawing.Point(0, 0);
+            this.pbFoto1.Name = "pbFoto1";
+            this.pbFoto1.Size = new System.Drawing.Size(402, 192);
+            this.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto1.TabIndex = 0;
+            this.pbFoto1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
@@ -451,403 +492,7 @@ namespace Proyecto2_bd2
             this.btnVerMas2.Text = "Ver mas";
             this.btnVerMas2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVerMas2.UseVisualStyleBackColor = false;
-            // 
-            // btnTitulo
-            // 
-            this.btnTitulo.FlatAppearance.BorderSize = 0;
-            this.btnTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTitulo.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTitulo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnTitulo.Location = new System.Drawing.Point(-10, 0);
-            this.btnTitulo.Name = "btnTitulo";
-            this.btnTitulo.Size = new System.Drawing.Size(975, 45);
-            this.btnTitulo.TabIndex = 14;
-            this.btnTitulo.Text = "Publicaciones recomendadas";
-            this.btnTitulo.UseVisualStyleBackColor = true;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(965, 523);
-            this.shapeContainer1.TabIndex = 13;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = -9;
-            this.lineShape1.X2 = 1063;
-            this.lineShape1.Y1 = 45;
-            this.lineShape1.Y2 = 45;
-            // 
-            // PanelVistaPublicacion
-            // 
-            this.PanelVistaPublicacion.Controls.Add(this.chcListServicios);
-            this.PanelVistaPublicacion.Controls.Add(this.button1);
-            this.PanelVistaPublicacion.Controls.Add(this.label10);
-            this.PanelVistaPublicacion.Controls.Add(this.txtPublicado);
-            this.PanelVistaPublicacion.Controls.Add(this.btnReservar);
-            this.PanelVistaPublicacion.Controls.Add(this.btnCancelar);
-            this.PanelVistaPublicacion.Controls.Add(this.btnGuardar);
-            this.PanelVistaPublicacion.Controls.Add(this.label9);
-            this.PanelVistaPublicacion.Controls.Add(this.cmbTipo);
-            this.PanelVistaPublicacion.Controls.Add(this.label8);
-            this.PanelVistaPublicacion.Controls.Add(this.spnCapacidad);
-            this.PanelVistaPublicacion.Controls.Add(this.label6);
-            this.PanelVistaPublicacion.Controls.Add(this.spnPrecio);
-            this.PanelVistaPublicacion.Controls.Add(this.label7);
-            this.PanelVistaPublicacion.Controls.Add(this.spnHabitaciones);
-            this.PanelVistaPublicacion.Controls.Add(this.label5);
-            this.PanelVistaPublicacion.Controls.Add(this.spnBanos);
-            this.PanelVistaPublicacion.Controls.Add(this.label4);
-            this.PanelVistaPublicacion.Controls.Add(this.cmbProvincia);
-            this.PanelVistaPublicacion.Controls.Add(this.label2);
-            this.PanelVistaPublicacion.Controls.Add(this.chcListPermite);
-            this.PanelVistaPublicacion.Controls.Add(this.label1);
-            this.PanelVistaPublicacion.Controls.Add(this.lblTituo);
-            this.PanelVistaPublicacion.Controls.Add(this.txtTituloPublicar);
-            this.PanelVistaPublicacion.Controls.Add(this.pictureBox1);
-            this.PanelVistaPublicacion.Controls.Add(this.shapeContainer2);
-            this.PanelVistaPublicacion.Location = new System.Drawing.Point(0, 47);
-            this.PanelVistaPublicacion.Name = "PanelVistaPublicacion";
-            this.PanelVistaPublicacion.Size = new System.Drawing.Size(965, 476);
-            this.PanelVistaPublicacion.TabIndex = 12;
-            // 
-            // chcListServicios
-            // 
-            this.chcListServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chcListServicios.FormattingEnabled = true;
-            this.chcListServicios.Items.AddRange(new object[] {
-            "WiFi",
-            "Limpieza",
-            "Piscina",
-            "Mesa de billar"});
-            this.chcListServicios.Location = new System.Drawing.Point(75, 330);
-            this.chcListServicios.Name = "chcListServicios";
-            this.chcListServicios.Size = new System.Drawing.Size(391, 88);
-            this.chcListServicios.TabIndex = 29;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(75, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 29);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Subir imagen desde tu dispositivo";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(490, 400);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 20);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Publicado por:";
-            // 
-            // txtPublicado
-            // 
-            this.txtPublicado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublicado.Location = new System.Drawing.Point(607, 397);
-            this.txtPublicado.Name = "txtPublicado";
-            this.txtPublicado.Size = new System.Drawing.Size(309, 26);
-            this.txtPublicado.TabIndex = 26;
-            // 
-            // btnReservar
-            // 
-            this.btnReservar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservar.Location = new System.Drawing.Point(851, 440);
-            this.btnReservar.Name = "btnReservar";
-            this.btnReservar.Size = new System.Drawing.Size(114, 31);
-            this.btnReservar.TabIndex = 24;
-            this.btnReservar.Text = "Reservar";
-            this.btnReservar.UseVisualStyleBackColor = true;
-            this.btnReservar.Visible = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(721, 440);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(114, 31);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(851, 440);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(114, 31);
-            this.btnGuardar.TabIndex = 22;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(75, 299);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(159, 20);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Servicios que incluye:";
-            // 
-            // cmbTipo
-            // 
-            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Items.AddRange(new object[] {
-            "Apartamento",
-            "Casa",
-            "Habitacion"});
-            this.cmbTipo.Location = new System.Drawing.Point(607, 138);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(309, 28);
-            this.cmbTipo.TabIndex = 20;
-            this.cmbTipo.Text = "< Elegir tipo de residencia >";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(556, 142);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Tipo:";
-            // 
-            // spnCapacidad
-            // 
-            this.spnCapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spnCapacidad.Location = new System.Drawing.Point(607, 248);
-            this.spnCapacidad.Name = "spnCapacidad";
-            this.spnCapacidad.Size = new System.Drawing.Size(114, 26);
-            this.spnCapacidad.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(510, 251);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Capacidad:";
-            // 
-            // spnPrecio
-            // 
-            this.spnPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spnPrecio.Location = new System.Drawing.Point(802, 248);
-            this.spnPrecio.Name = "spnPrecio";
-            this.spnPrecio.Size = new System.Drawing.Size(114, 26);
-            this.spnPrecio.TabIndex = 16;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(742, 251);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Precio:";
-            // 
-            // spnHabitaciones
-            // 
-            this.spnHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spnHabitaciones.Location = new System.Drawing.Point(607, 194);
-            this.spnHabitaciones.Name = "spnHabitaciones";
-            this.spnHabitaciones.Size = new System.Drawing.Size(114, 26);
-            this.spnHabitaciones.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(493, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Habitaciones:";
-            // 
-            // spnBanos
-            // 
-            this.spnBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spnBanos.Location = new System.Drawing.Point(802, 194);
-            this.spnBanos.Name = "spnBanos";
-            this.spnBanos.Size = new System.Drawing.Size(114, 26);
-            this.spnBanos.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(742, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Baños:";
-            // 
-            // cmbProvincia
-            // 
-            this.cmbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbProvincia.FormattingEnabled = true;
-            this.cmbProvincia.Items.AddRange(new object[] {
-            "Azua",
-            "Bahoruco",
-            "Barahona",
-            "Dajabón",
-            "Distrito Nacional",
-            "Duarte",
-            "Elías Piña",
-            "El Seibo",
-            "Espaillat",
-            "Hato Mayor",
-            "Hermanas Mirabal",
-            "Independencia",
-            "La Altagracia",
-            "La Romana",
-            "La Vega",
-            "María Trinidad Sánchez",
-            "Monseñor Nouel",
-            "Monte Cristi",
-            "Monte Plata",
-            "Pedernales",
-            "Peravia",
-            "Puerto Plata",
-            "Samaná",
-            "San Cristóbal",
-            "San José de Ocoa",
-            "San Juan",
-            "San Pedro de Macorís",
-            "Sánchez Ramírez",
-            "Santiago",
-            "Santiago Rodríguez",
-            "Santo Domingo",
-            "Valverde"});
-            this.cmbProvincia.Location = new System.Drawing.Point(607, 82);
-            this.cmbProvincia.Name = "cmbProvincia";
-            this.cmbProvincia.Size = new System.Drawing.Size(309, 28);
-            this.cmbProvincia.TabIndex = 7;
-            this.cmbProvincia.Text = "< Elegir provincia >";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(532, 299);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Permite:";
-            // 
-            // chcListPermite
-            // 
-            this.chcListPermite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chcListPermite.FormattingEnabled = true;
-            this.chcListPermite.Items.AddRange(new object[] {
-            "Fumar",
-            "Mascotas",
-            "Niños"});
-            this.chcListPermite.Location = new System.Drawing.Point(607, 302);
-            this.chcListPermite.Name = "chcListPermite";
-            this.chcListPermite.Size = new System.Drawing.Size(309, 67);
-            this.chcListPermite.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(523, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Provincia:";
-            // 
-            // lblTituo
-            // 
-            this.lblTituo.AutoSize = true;
-            this.lblTituo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituo.Location = new System.Drawing.Point(548, 31);
-            this.lblTituo.Name = "lblTituo";
-            this.lblTituo.Size = new System.Drawing.Size(51, 20);
-            this.lblTituo.TabIndex = 2;
-            this.lblTituo.Text = "Titulo:";
-            // 
-            // txtTituloPublicar
-            // 
-            this.txtTituloPublicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloPublicar.Location = new System.Drawing.Point(607, 28);
-            this.txtTituloPublicar.Name = "txtTituloPublicar";
-            this.txtTituloPublicar.Size = new System.Drawing.Size(309, 26);
-            this.txtTituloPublicar.TabIndex = 1;
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape2});
-            this.shapeContainer2.Size = new System.Drawing.Size(965, 476);
-            this.shapeContainer2.TabIndex = 25;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 1;
-            this.lineShape2.X2 = 964;
-            this.lineShape2.Y1 = 437;
-            this.lineShape2.Y2 = 437;
-            // 
-            // btnRating1
-            // 
-            this.btnRating1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnRating1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.BorderSize = 0;
-            this.btnRating1.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRating1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnRating1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRating1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRating1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnRating1.Image = ((System.Drawing.Image)(resources.GetObject("btnRating1.Image")));
-            this.btnRating1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRating1.Location = new System.Drawing.Point(167, 140);
-            this.btnRating1.Name = "btnRating1";
-            this.btnRating1.Size = new System.Drawing.Size(116, 38);
-            this.btnRating1.TabIndex = 8;
-            this.btnRating1.TabStop = false;
-            this.btnRating1.Text = "4.8/5";
-            this.btnRating1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRating1.UseVisualStyleBackColor = false;
-            this.btnRating1.Click += new System.EventHandler(this.btnRating1_Click);
-            // 
-            // pbFoto1
-            // 
-            this.pbFoto1.BackColor = System.Drawing.SystemColors.Control;
-            this.pbFoto1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbFoto1.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto1.Image")));
-            this.pbFoto1.Location = new System.Drawing.Point(0, 0);
-            this.pbFoto1.Name = "pbFoto1";
-            this.pbFoto1.Size = new System.Drawing.Size(402, 192);
-            this.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFoto1.TabIndex = 0;
-            this.pbFoto1.TabStop = false;
+            this.btnVerMas2.Click += new System.EventHandler(this.btnVerMas2_Click);
             // 
             // btnRating2
             // 
@@ -906,16 +551,405 @@ namespace Proyecto2_bd2
             this.btnSiguiente.TabIndex = 16;
             this.btnSiguiente.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // btnTitulo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(75, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(394, 243);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnTitulo.FlatAppearance.BorderSize = 0;
+            this.btnTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTitulo.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTitulo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTitulo.Location = new System.Drawing.Point(-10, 0);
+            this.btnTitulo.Name = "btnTitulo";
+            this.btnTitulo.Size = new System.Drawing.Size(975, 45);
+            this.btnTitulo.TabIndex = 14;
+            this.btnTitulo.Text = "Publicaciones recomendadas";
+            this.btnTitulo.UseVisualStyleBackColor = true;
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(965, 466);
+            this.shapeContainer1.TabIndex = 13;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = -9;
+            this.lineShape1.X2 = 1063;
+            this.lineShape1.Y1 = 45;
+            this.lineShape1.Y2 = 45;
+            // 
+            // PanelVistaPublicacion
+            // 
+            this.PanelVistaPublicacion.Controls.Add(this.numericUpDown1);
+            this.PanelVistaPublicacion.Controls.Add(this.label3);
+            this.PanelVistaPublicacion.Controls.Add(this.chcListServicios);
+            this.PanelVistaPublicacion.Controls.Add(this.button1);
+            this.PanelVistaPublicacion.Controls.Add(this.lblPublicadoPor);
+            this.PanelVistaPublicacion.Controls.Add(this.txtPublicado);
+            this.PanelVistaPublicacion.Controls.Add(this.btnReservar);
+            this.PanelVistaPublicacion.Controls.Add(this.btnCancelar);
+            this.PanelVistaPublicacion.Controls.Add(this.btnGuardar);
+            this.PanelVistaPublicacion.Controls.Add(this.label9);
+            this.PanelVistaPublicacion.Controls.Add(this.cmbTipo);
+            this.PanelVistaPublicacion.Controls.Add(this.label8);
+            this.PanelVistaPublicacion.Controls.Add(this.spnCapacidad);
+            this.PanelVistaPublicacion.Controls.Add(this.label6);
+            this.PanelVistaPublicacion.Controls.Add(this.spnCamas);
+            this.PanelVistaPublicacion.Controls.Add(this.label7);
+            this.PanelVistaPublicacion.Controls.Add(this.spnHabitaciones);
+            this.PanelVistaPublicacion.Controls.Add(this.label5);
+            this.PanelVistaPublicacion.Controls.Add(this.spnBanos);
+            this.PanelVistaPublicacion.Controls.Add(this.label4);
+            this.PanelVistaPublicacion.Controls.Add(this.cmbProvincia);
+            this.PanelVistaPublicacion.Controls.Add(this.label2);
+            this.PanelVistaPublicacion.Controls.Add(this.chcListPermite);
+            this.PanelVistaPublicacion.Controls.Add(this.label1);
+            this.PanelVistaPublicacion.Controls.Add(this.lblTituo);
+            this.PanelVistaPublicacion.Controls.Add(this.txtTituloPublicar);
+            this.PanelVistaPublicacion.Controls.Add(this.pbCargarFoto);
+            this.PanelVistaPublicacion.Controls.Add(this.shapeContainer2);
+            this.PanelVistaPublicacion.Location = new System.Drawing.Point(0, 47);
+            this.PanelVistaPublicacion.Name = "PanelVistaPublicacion";
+            this.PanelVistaPublicacion.Size = new System.Drawing.Size(965, 476);
+            this.PanelVistaPublicacion.TabIndex = 12;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(607, 349);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(309, 26);
+            this.numericUpDown1.TabIndex = 31;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(536, 352);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Precio:";
+            // 
+            // chcListServicios
+            // 
+            this.chcListServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chcListServicios.FormattingEnabled = true;
+            this.chcListServicios.Items.AddRange(new object[] {
+            "WiFi",
+            "Limpieza",
+            "Piscina",
+            "Mesa de billar"});
+            this.chcListServicios.Location = new System.Drawing.Point(75, 330);
+            this.chcListServicios.Name = "chcListServicios";
+            this.chcListServicios.Size = new System.Drawing.Size(391, 88);
+            this.chcListServicios.TabIndex = 29;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(75, 267);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(394, 29);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Subir imagen desde tu dispositivo";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblPublicadoPor
+            // 
+            this.lblPublicadoPor.AutoSize = true;
+            this.lblPublicadoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPublicadoPor.Location = new System.Drawing.Point(490, 398);
+            this.lblPublicadoPor.Name = "lblPublicadoPor";
+            this.lblPublicadoPor.Size = new System.Drawing.Size(109, 20);
+            this.lblPublicadoPor.TabIndex = 27;
+            this.lblPublicadoPor.Text = "Publicado por:";
+            // 
+            // txtPublicado
+            // 
+            this.txtPublicado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPublicado.Location = new System.Drawing.Point(607, 395);
+            this.txtPublicado.Name = "txtPublicado";
+            this.txtPublicado.Size = new System.Drawing.Size(309, 26);
+            this.txtPublicado.TabIndex = 26;
+            this.txtPublicado.TextChanged += new System.EventHandler(this.txtPublicado_TextChanged);
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservar.Location = new System.Drawing.Point(851, 442);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(114, 31);
+            this.btnReservar.TabIndex = 24;
+            this.btnReservar.Text = "Reservar";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            this.btnReservar.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(721, 440);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(114, 31);
+            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(851, 440);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(114, 31);
+            this.btnGuardar.TabIndex = 22;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(75, 299);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(159, 20);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Servicios que incluye:";
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Apartamento",
+            "Casa",
+            "Habitacion"});
+            this.cmbTipo.Location = new System.Drawing.Point(607, 122);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(309, 28);
+            this.cmbTipo.TabIndex = 20;
+            this.cmbTipo.Text = "< Elegir tipo de residencia >";
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(556, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Tipo:";
+            // 
+            // spnCapacidad
+            // 
+            this.spnCapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spnCapacidad.Location = new System.Drawing.Point(607, 216);
+            this.spnCapacidad.Name = "spnCapacidad";
+            this.spnCapacidad.Size = new System.Drawing.Size(114, 26);
+            this.spnCapacidad.TabIndex = 18;
+            this.spnCapacidad.ValueChanged += new System.EventHandler(this.spnCapacidad_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(510, 219);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Capacidad:";
+            // 
+            // spnCamas
+            // 
+            this.spnCamas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spnCamas.Location = new System.Drawing.Point(802, 216);
+            this.spnCamas.Name = "spnCamas";
+            this.spnCamas.Size = new System.Drawing.Size(114, 26);
+            this.spnCamas.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(742, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Camas:";
+            // 
+            // spnHabitaciones
+            // 
+            this.spnHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spnHabitaciones.Location = new System.Drawing.Point(607, 170);
+            this.spnHabitaciones.Name = "spnHabitaciones";
+            this.spnHabitaciones.Size = new System.Drawing.Size(114, 26);
+            this.spnHabitaciones.TabIndex = 14;
+            this.spnHabitaciones.ValueChanged += new System.EventHandler(this.spnHabitaciones_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(493, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Habitaciones:";
+            // 
+            // spnBanos
+            // 
+            this.spnBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spnBanos.Location = new System.Drawing.Point(802, 170);
+            this.spnBanos.Name = "spnBanos";
+            this.spnBanos.Size = new System.Drawing.Size(114, 26);
+            this.spnBanos.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(742, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 20);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Baños:";
+            // 
+            // cmbProvincia
+            // 
+            this.cmbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Items.AddRange(new object[] {
+            "Azua",
+            "Bahoruco",
+            "Barahona",
+            "Dajabón",
+            "Distrito Nacional",
+            "Duarte",
+            "Elías Piña",
+            "El Seibo",
+            "Espaillat",
+            "Hato Mayor",
+            "Hermanas Mirabal",
+            "Independencia",
+            "La Altagracia",
+            "La Romana",
+            "La Vega",
+            "María Trinidad Sánchez",
+            "Monseñor Nouel",
+            "Monte Cristi",
+            "Monte Plata",
+            "Pedernales",
+            "Peravia",
+            "Puerto Plata",
+            "Samaná",
+            "San Cristóbal",
+            "San José de Ocoa",
+            "San Juan",
+            "San Pedro de Macorís",
+            "Sánchez Ramírez",
+            "Santiago",
+            "Santiago Rodríguez",
+            "Santo Domingo",
+            "Valverde"});
+            this.cmbProvincia.Location = new System.Drawing.Point(607, 74);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(309, 28);
+            this.cmbProvincia.TabIndex = 7;
+            this.cmbProvincia.Text = "< Elegir provincia >";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(532, 262);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Permite:";
+            // 
+            // chcListPermite
+            // 
+            this.chcListPermite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chcListPermite.FormattingEnabled = true;
+            this.chcListPermite.Items.AddRange(new object[] {
+            "Fumar",
+            "Mascotas",
+            "Niños"});
+            this.chcListPermite.Location = new System.Drawing.Point(607, 262);
+            this.chcListPermite.Name = "chcListPermite";
+            this.chcListPermite.Size = new System.Drawing.Size(309, 67);
+            this.chcListPermite.TabIndex = 5;
+            this.chcListPermite.SelectedIndexChanged += new System.EventHandler(this.chcListPermite_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(523, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Provincia:";
+            // 
+            // lblTituo
+            // 
+            this.lblTituo.AutoSize = true;
+            this.lblTituo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituo.Location = new System.Drawing.Point(548, 31);
+            this.lblTituo.Name = "lblTituo";
+            this.lblTituo.Size = new System.Drawing.Size(51, 20);
+            this.lblTituo.TabIndex = 2;
+            this.lblTituo.Text = "Titulo:";
+            // 
+            // txtTituloPublicar
+            // 
+            this.txtTituloPublicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTituloPublicar.Location = new System.Drawing.Point(607, 28);
+            this.txtTituloPublicar.Name = "txtTituloPublicar";
+            this.txtTituloPublicar.Size = new System.Drawing.Size(309, 26);
+            this.txtTituloPublicar.TabIndex = 1;
+            // 
+            // pbCargarFoto
+            // 
+            this.pbCargarFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbCargarFoto.Image")));
+            this.pbCargarFoto.Location = new System.Drawing.Point(75, 28);
+            this.pbCargarFoto.Name = "pbCargarFoto";
+            this.pbCargarFoto.Size = new System.Drawing.Size(394, 243);
+            this.pbCargarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCargarFoto.TabIndex = 0;
+            this.pbCargarFoto.TabStop = false;
+            this.pbCargarFoto.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // shapeContainer2
+            // 
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2});
+            this.shapeContainer2.Size = new System.Drawing.Size(965, 476);
+            this.shapeContainer2.TabIndex = 25;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 1;
+            this.lineShape2.X2 = 964;
+            this.lineShape2.Y1 = 437;
+            this.lineShape2.Y2 = 437;
             // 
             // Form1
             // 
@@ -924,8 +958,8 @@ namespace Proyecto2_bd2
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(965, 523);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PanelPublicacion);
             this.Controls.Add(this.PanelVistaPublicacion);
+            this.Controls.Add(this.PanelPublicacion);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -934,18 +968,19 @@ namespace Proyecto2_bd2
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).EndInit();
             this.PanelVistaPublicacion.ResumeLayout(false);
             this.PanelVistaPublicacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnCapacidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spnPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spnCamas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnHabitaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnBanos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCargarFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -989,13 +1024,13 @@ namespace Proyecto2_bd2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTituo;
         private System.Windows.Forms.TextBox txtTituloPublicar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbCargarFoto;
         private System.Windows.Forms.CheckedListBox chcListPermite;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbProvincia;
         private System.Windows.Forms.NumericUpDown spnCapacidad;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown spnPrecio;
+        private System.Windows.Forms.NumericUpDown spnCamas;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown spnHabitaciones;
         private System.Windows.Forms.Label label5;
@@ -1009,10 +1044,12 @@ namespace Proyecto2_bd2
         private System.Windows.Forms.Button btnGuardar;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblPublicadoPor;
         private System.Windows.Forms.TextBox txtPublicado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckedListBox chcListServicios;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
