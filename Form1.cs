@@ -69,15 +69,16 @@ namespace Proyecto2_bd2
 
         private void btnVerMas1_Click(object sender, EventArgs e)
         {
-            lblPublicadoPor.Show();
-            txtPublicado.Show();
-            btnReservar.Show();
-            btnGuardar.Hide();
             loadPublicacion(true);
         }
 
         void loadPublicacion(bool valor)
         {
+            lblPublicadoPor.Show();
+            txtPublicado.Show();
+            btnReservar.Show();
+            btnGuardar.Hide();
+
             if (valor)
             {
                 txtPublicado.Text = publicacion1.Persona.Nombre;
