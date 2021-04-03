@@ -186,5 +186,20 @@
   <ItemGroup>
     <None Include="Resources\estrella %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lapiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerca %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolar %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

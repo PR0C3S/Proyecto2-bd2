@@ -63,6 +63,46 @@ namespace Proyecto2_bd2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerca {
+            get {
+                object obj = ResourceManager.GetObject("cerca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerca__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cerca (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dolar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("dolar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dolar__2_ {
+            get {
+                object obj = ResourceManager.GetObject("dolar (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estrella__3_ {
             get {
                 object obj = ResourceManager.GetObject("estrella (3)", resourceCulture);
@@ -86,6 +126,16 @@ namespace Proyecto2_bd2.Properties {
         internal static System.Drawing.Bitmap flecha_izquierda {
             get {
                 object obj = ResourceManager.GetObject("flecha-izquierda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lapiz {
+            get {
+                object obj = ResourceManager.GetObject("lapiz", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

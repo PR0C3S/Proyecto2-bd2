@@ -10,7 +10,6 @@ namespace Proyecto2_bd2.Logico
     {
         private long idCliente;
         private DateTime fechaInicio;
-        private DateTime fechaTermino;
         private Publicacion reservado;
         private int precioTiempo;
     }
